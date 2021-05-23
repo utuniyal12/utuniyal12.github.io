@@ -7,13 +7,8 @@ body{
     font-style: italic;
 }
 .wrapper{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    overflow: hidden;
+    margin: auto;
     text-align: center;
-    transform: translate(-50%, -50%);
-
 }
 .intro{
     position: absolute;
@@ -43,7 +38,7 @@ body{
     0% {  opacity: 0; border-radius: 50%;}
     100% { opacity: 1;}
 }
-.enter-btn:hover{
+.enter-btn:hover, .navbar li:hover{
     animation: flip 0.7s ease;
     background-color: #FF5733;
     color: white;
@@ -62,30 +57,64 @@ body{
 img{
     width: 100%;
 }
-.main{
-    align-items: center;
-    overflow: hidden;
-    display: grid;
-    align-items: center;
-    grid-template-rows: 1fr 1fr;
-}
 .intro p{
     font-size: xx-small;
-}
-ul{
-    font-family: 'Source Code Pro', monospace;
-    width: 50%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    list-style: none;
-    text-decoration: none;
-}
-li{
-    padding: 20px;
-    display: block;
-    margin: auto;
 }
 img{
     width: 40%;
 }
+.main{
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction:column ;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+.navbar ul{
+    float: right;
+    text-align: right;
+}
+li{
+    font-family: 'Source Code Pro', monospace;
+    padding: 20px;
+    font-size: 1.2em;
+    list-style: none;
+    text-decoration: none;
+}
+li span{
+    color: #FF5733;
+}
+.banner{
+    position: relative;
+    height: 100%;
+}
+.banner-message{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    ul{
+        flex-direction: column;
+    }
+    li{
+        padding: 5px;
+    }
+  }

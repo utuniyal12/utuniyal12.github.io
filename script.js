@@ -1,4 +1,4 @@
-var enterButton = document.getElementsByClassName("intro")[0];
+var enterButton = document.getElementsByClassName("enter-btn")[0];
 var intro = document.getElementsByClassName("intro")[0];
 var main = document.getElementsByClassName("main")[0];
 
@@ -13,3 +13,6 @@ enterButton.addEventListener("click", function(){
 
 
 
+var bannerMessage = document.getElementsByClassName("banner-message")[0].getElementsByTagName("h1")[0];
+
+bannerMessage.addEventListener()
