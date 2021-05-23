@@ -39,13 +39,9 @@ body{
     100% { opacity: 1;}
 }
 .enter-btn:hover, .navbar li:hover{
-    animation: flip 0.7s ease;
     background-color: #FF5733;
     color: white;
-}
-@keyframes flip {
-    from {transform: rotateY(180deg)}
-    to {transform: rotateY(360deg)}
+    transition: all 0.7s ease;
 }
 .hidden{
     display: none;
@@ -76,15 +72,24 @@ ul{
     margin: 0;
     display: flex;
     flex-direction: row;
+    text-align: center;
 }
 .navbar ul{
-    float: right;
-    text-align: right;
+    position: relative;
+}
+.back-btn{
+    background-color: #FF5733;
+    position: absolute;
+    left: 0;
+}
+.contact{
+    position: absolute;
+    right: 0;
 }
 li{
     font-family: 'Source Code Pro', monospace;
-    padding: 20px;
-    font-size: 1.2em;
+    padding: 10px;
+    font-size: 1em;
     list-style: none;
     text-decoration: none;
 }
@@ -92,8 +97,8 @@ li span{
     color: #FF5733;
 }
 .banner{
-    position: relative;
     height: 100%;
+    position: relative;
 }
 .banner-message{
     position: absolute;
@@ -102,13 +107,106 @@ li span{
     margin: auto;
     transform: translate(-50%, -50%);
 }
+.banner-options li:hover{
+    color: #FF5733;
+    transition: all .5s ease;
+}
+h1{
+    padding: 5px;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 10%, #fff,80%, rgba(0,0,0,.6) 90%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s infinite;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.tc-st1, .tc-st2{
+    animation: reveal 2s ease-in-out;
+}
+.flexbox{
+    display: flex;
+}
+.skills{
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin: 200px auto;
+}
+.skill-square img{
+    width: 100px;
+}
+.skill-square{
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: animate 10s ease-in-out infinite;
+}
+.skill-square div{
+    color: #FF5733;
+    font-size: 1.2em;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    line-height: 200px;
+}
+.skills-list ul{
+    flex-direction: column;
+}
+.box1{
+    border: 1px solid #FF5733;
+    transform: translateZ(200px);
+}
+.box2{
+    border: 1px solid white;
+    transform: rotateY(90deg) translateZ(200px);
+}
+.box3{
+    border: 1px solid #FF5733;
+    transform: rotateY(90deg) rotateX(90deg) translateZ(200px);
+}
+.box4{
+    border: 1px solid white;
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(200px);
+}
+.box5{
+    border: 1px solid white;
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(200px);
+}
+.box6{
+    border: 1px solid white;
+    transform:rotateX(-90deg) translateZ(200px);
+}
+@keyframes animate {
+    from,to{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16%{
+        transform: rotateY(-90deg);
+    }
+    33%{
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50%{
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66%{
+        transform: rotateY(-270deg) rotateZ(90deg);
+    }
+    83%{
+        transform: rotateX(90deg);
+    }
+}
 
-
-
-
-
-
-
+@-webkit-keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
 
 @media screen and (max-width: 800px) {
     ul{
@@ -116,5 +214,34 @@ li span{
     }
     li{
         padding: 5px;
+    }
+    .skill-square div{
+        width: 200px;
+        height: 200px;
+        font-size: 1em;
+    }
+    .box1{
+        border: 1px solid #FF5733;
+        transform: translateZ(75px);
+    }
+    .box2{
+        border: 1px solid white;
+        transform: rotateY(90deg) translateZ(100px);
+    }
+    .box3{
+        border: 1px solid #FF5733;
+        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    }
+    .box4{
+        border: 1px solid white;
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    }
+    .box5{
+        border: 1px solid white;
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    }
+    .box6{
+        border: 1px solid white;
+        transform:rotateX(-90deg) translateZ(100px);
     }
   }
