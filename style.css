@@ -7,6 +7,7 @@ body{
     font-style: italic;
 }
 .wrapper{
+    z-index: -1;
     margin: auto;
     text-align: center;
 }
@@ -32,13 +33,14 @@ body{
     text-decoration: none;
     color: #FF5733;
     overflow: hidden;
+    transform:skew(-10deg);
     animation: reveal 2s ease;
 }
 @keyframes reveal {
     0% {  opacity: 0; border-radius: 50%;}
     100% { opacity: 1;}
 }
-.enter-btn:hover, .navbar li:hover{
+.enter-btn:hover, .contact{
     background-color: #FF5733;
     color: white;
     transition: all 0.7s ease;
@@ -74,6 +76,9 @@ ul{
     flex-direction: row;
     text-align: center;
 }
+.navbar{
+    z-index: 1;
+}
 .navbar ul{
     position: relative;
 }
@@ -81,12 +86,14 @@ ul{
     background-color: #FF5733;
     position: absolute;
     left: 0;
+    display: none;
 }
 .contact{
     position: absolute;
     right: 0;
 }
 li{
+    cursor: pointer;
     font-family: 'Source Code Pro', monospace;
     padding: 10px;
     font-size: 1em;
@@ -127,7 +134,7 @@ a{
 .flexbox{
     display: flex;
 }
-.skills{
+.skills, .workex, .git, .contact-card{
     display: none;
     flex-direction: row;
     justify-content: space-between;
@@ -158,7 +165,7 @@ a{
     transform: translateZ(200px);
 }
 .box2{
-    border: 1px solid white;
+    border: 1px solid #FF5733;
     transform: rotateY(90deg) translateZ(200px);
 }
 .box3{
@@ -166,16 +173,21 @@ a{
     transform: rotateY(90deg) rotateX(90deg) translateZ(200px);
 }
 .box4{
-    border: 1px solid white;
+    border: 1px solid #FF5733;
     transform: rotateY(180deg) rotateZ(90deg) translateZ(200px);
 }
 .box5{
-    border: 1px solid white;
+    border: 1px solid #FF5733;
     transform: rotateY(-90deg) rotateZ(90deg) translateZ(200px);
 }
 .box6{
-    border: 1px solid white;
+    border: 1px solid #FF5733;
     transform:rotateX(-90deg) translateZ(200px);
+}
+.contact-card{
+    width: 100%;
+    height: 100%;
+    background-color: white;
 }
 @keyframes animate {
     from,to{
@@ -212,6 +224,22 @@ a{
     ul{
         flex-direction: column;
     }
+    .enter-btn{
+        color: white;
+        background-color: #FF5733;
+    }
+    .main{
+        width: 90%;
+    }
+    .banner-message{
+        width: 90%;
+    }
+    .banner-message h1{
+        font-size: x-large;
+    }
+    .banner-options{
+        font-size: small;
+    }
     li{
         padding: 5px;
     }
@@ -225,7 +253,7 @@ a{
         transform: translateZ(75px);
     }
     .box2{
-        border: 1px solid white;
+        border: 1px solid #FF5733;
         transform: rotateY(90deg) translateZ(100px);
     }
     .box3{
@@ -233,15 +261,15 @@ a{
         transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
     }
     .box4{
-        border: 1px solid white;
+        border: 1px solid #FF5733;
         transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
     }
     .box5{
-        border: 1px solid white;
+        border: 1px solid #FF5733;
         transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
     }
     .box6{
-        border: 1px solid white;
+        border: 1px solid #FF5733;
         transform:rotateX(-90deg) translateZ(100px);
     }
   }
