@@ -16,10 +16,12 @@ var gitsection = document.getElementsByClassName("git")[0];
 var allsections = [ skillssection,gitsection, workexsection]
 var contactcard = document.getElementsByClassName("contact-card")[0];
 var contactflag = false
+var contactbtnmsg = "contactMe();"
 enterButton.addEventListener("click", function () {
     intro.className += " hidden"
     main.className += "reveal"
-    main.className = main.className.replace("hidden", " ")
+    contactbtn.setAttribute("style","display:block")
+    main.className = main.className.replace(" hidden", " ")
 })
 
 techstackbtn.addEventListener('click', function () {
@@ -48,3 +50,19 @@ backBtn.addEventListener('click', function () {
     backBtn.setAttribute("style", "display: none")
 })
 
+
+contactbtn.addEventListener("click",function(){
+    contactflag = contactflag===true?false:true
+    if(contactflag){
+        contactbtn.innerHTML= "X"
+        document.getElementsByClassName("wrapper")[0]
+        .setAttribute("style","display:none")
+        contactcard.setAttribute("style","display:flex")
+    }
+    else{
+        contactbtn.innerHTML = contactbtnmsg
+        contactcard.setAttribute("style","display:none")
+        document.getElementsByClassName("wrapper")[0]
+        .setAttribute("style","display:block")
+    }
+})
