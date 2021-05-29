@@ -18,7 +18,7 @@ anime({
   $('.skills img').waypoint(function(direction) {
     if(direction=='down'){
         anime({
-            borderRadius: "400px",
+            borderRadius: "100%",
             scale: [1, 0.8],
             targets: this.element,
             duration: 1000,
