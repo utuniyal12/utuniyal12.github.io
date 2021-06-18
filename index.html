@@ -1,43 +1,115 @@
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/main.css">
-    </head>
-    <body>
-        <div class="wrapper">
-            <section id="home">
-                <div class="greet">
-                    <h1>Hi,</h1>
-                    <h1> I am Utkarsh</h1>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section id="home">
+            <img src="images/hacker.png">
+            <h1>I am Utkarsh</h1>
+            <p class="desig">A SOFTWARE ENGINEER.</p>
+        </section>
+        <section id="tc-st">
+            <div class="sk-desc">
+                <h1>Skills</h1>
+                <p>The main area of my expertise</p>
+                <p>lies in backend software developmenmt.</p>
+                <p>I have experience working on Spring boot</p>
+                <p>microservices.</p>
+                </p>
+            </div>
+            <div class="sk-itm">
+                <div>JAVA</div>
+                <div>SPRING BOOT</div>
+                <div>POSTGRESQL</div>
+                <div>HIBERNATE</div>
+                <div>AWS</div>
+                <div>HTML/CSS/JS</div>
+            </div>
+        </section>
+        <section id="wr-ex">
+
+        </section>
+        <section id="git">
+            <div class="git-bn">
+                <h1>Github</h1>
+                <p><span>The vaccine notifier</span> sends you a notification</p>
+                <p>to your telegram bot as and when</p>
+                <p>vaccine becomes available in your location.</p>
+                <p><span>The Stock Spy</span> is a platform where u can find </p>
+                <p>the stocks where the biggest investors</p>
+                <p>of the Indian stock markert are investing</p>
+                <p>their money.</p>
+            </div>
+            <div class="vid-itms">
+                <div class="vid">
+                    <video preload="" autoplay="" muted="" playsinline="" loop="">
+                        <source src="vids/stockspy.mp4" type="video/mp4">
+                    </video>
                 </div>
-                <p class="desig">A SOFTWARE ENGINEER.</p>
-            </section>
-            <section id="tc-st">
-                <h1>HI</h1>
-            </section>
-            <section id="wr-ex">
-                <h1>HI</h1>
-            </section>
-            <section id="git">
-                <h1>HI</h1>
-            </section>
-            <section id="ct">
-                <h1>HI</h1>
-            </section>
-        </div>
-        <div class="nav">
-            <ul>
-                <a href="#home"><li class="hm-btn">HOME</li></a>
-                <a href="#tc-st"><li class="tc-st-btn">TECH STACK</li></a>
-                <a href="#wr-ex"><li class="wk-ex-btn">WORK-EX</li></a>
-                <a href="#git"><li class="gt-btn">GITHUB</li></a>
-                <a href="#ct"><li class="ct-btn">CONTACT ME</li></a>
-            </ul>
-        </div>
-        <script src="scripts/main.js"></script>
-    </body>
+                <div class="vid">
+                    <video preload="" autoplay="" muted="" playsinline="" loop="">
+                        <source src="vids/vaccine-finder.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+        <section id="ct">
+            <div class="ct-itms">
+                <div class="ct-nav"></div>
+                <div class="inps">
+                    <div>
+                        <h1>Contact</h1>
+                        <h1>me.</h1>
+                        <br>
+                        <a href="https://www.linkedin.com/in/utkarsh-uniyal-015327156/" target="_blank">
+                            <p>Click to view Linkdin profile</p>
+                        </a>
+                    </div>
+                    <div>
+                        <input class="sender-name" type="text" placeholder="N A M E">
+                        <input class="sender-email" type="text" placeholder="E M A I L">
+                        <textarea class="message" placeholder="Type your message here."></textarea>
+                        <button class="send-btn">SEND</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="nav">
+        <ul>
+            <a href="#home">
+                <li class="hm-btn">HOME</li>
+            </a>
+            <a href="#tc-st">
+                <li class="tc-st-btn">TECH STACK</li>
+            </a>
+            <a href="#wr-ex">
+                <li class="wk-ex-btn">WORK-EX</li>
+            </a>
+            <a href="#git">
+                <li class="gt-btn">GITHUB</li>
+            </a>
+            <a href="#ct">
+                <li class="ct-btn">CONTACT ME</li>
+            </a>
+        </ul>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+
 </html>

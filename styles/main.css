@@ -34,6 +34,15 @@ a, a:hover, a:focus, a:active {
     height: 100vh;
     writing-mode: vertical-rl;
 }
+.st-item{
+    display: flex;
+}
+#home{
+    position: relative;
+}
+#home h1{
+    position: absolute;
+}
 .wrapper{
     width: 90%;
     height: 100%;
@@ -41,6 +50,34 @@ a, a:hover, a:focus, a:active {
     overflow-y: scroll;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+}
+#tc-st{
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+.sk-desc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.sk-desc h1{
+    color: #F1C40F;
+}
+.sk-itm{
+    display: grid;
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    margin-left: 0;
+    grid-template-columns: repeat(2, 1fr);
+}
+.sk-itm div{
+    margin: auto;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -57,21 +94,148 @@ section{
     line-height: 0;
     margin: 0;
 }
-.greet{
+
+.git-bn{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+.git-bn p{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2em;
+}
+video{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 90%;
+}
+#git{
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+.vid{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.hidden{
+}
+video:hover{
+    width: 100%;
+    box-shadow: none;
+    transition: all .3s ease-in-out;
+}
+.vid p{
+    width: 100%;
+    text-align: left;
+    background-color: #F1C40F;
+}
+.vid-itms{
+    display: flex;
+    margin-left: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.inps{
+    display: grid;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    grid-template-columns: 1fr 2fr;
+}
+.inps h1{
+    animation: none;
+    font-size: 3em;
+}
+.inps div:nth-child(2){
+    width: 80%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    margin-right: 0;
+    justify-content: space-evenly;
+}
+.ct-nav{
+    background-color: #393939;
+}
+.ct-itms{
+    background: #1C1C1C;
+    width: 60%;
+    height: 50%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+}
+input{
+    width: 100%;
+    color: white;
+    font-weight: bolder;
+    background: none;
+    border: none;
+    padding: 2%;
+    border-bottom: 1px solid #393939;
+}
+textarea{
+    color: white;
+    width: 100%;
+    line-height: 3;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #393939;
+}
+.inps p:nth-child(1){
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #646464  ;
+}
+.inps p:nth-child(1):hover{
+    color: #9A9A9A;
+}
+button{
+    background: none;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    color: #DE3163;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+button:hover{
+    opacity: 0.5;
+}
+input:focus {
+    outline: none;
+ }
+#git div{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sk-desc p{
+    font-size: 1.4em;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+img{
+    width: 250px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 section:nth-child(1){
     background-color: #F1C40F;
 }
 section:nth-child(2){
-    background-color: #FF7F50;
+    background-color: #1C1C1C ;
 }
 section:nth-child(3){
     background-color: #6495ED;
 }
 section:nth-child(4){
-    background-color: #2ECC71 ;
+    background-color: #1C1C1C ;
 }
 section:nth-child(5){
     background-color: #DE3163 ;
@@ -80,16 +244,27 @@ section:nth-child(5){
     font-family: 'Libre Barcode 39 Text', cursive;
     font-size: 3em;
 }
+#git h1{
+    color: #F1C40F;
+}
+.git-bn span{
+    color: #F1C40F;
+    font-weight: bolder;
+}
 h1{
-    font-size: 5em;
-    animation-name: floating;
+    animation-name: floatingrev;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    font-size: 5em;
 }
-
 @keyframes floating {
     0% { transform: translate(0,  0px); }
     50%  { transform: translate(0, 30px); }
     100%   { transform: translate(0, -0px); }    
+}
+@keyframes floatingrev {
+    0% { transform: translate(0,  -0px); }
+    50%  { transform: translate(0, -15px); }
+    100%   { transform: translate(0, 0px); }    
 }
